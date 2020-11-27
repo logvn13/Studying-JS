@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Human(name, age) {
+        this.Name = name;
+        this.Age = age;
+      }
+      Human.prototype.toString = function() {
+        return "[Name: " + this.Name + "; Age: " + this.Age + "] ";
+      };
+      let humans = [
+        new Human("Oleg", 18),
+        new Human("Maria", 34),
+        new Human("John", 52),
+        new Human("Michael", 12),
+        new Human("Virab", 23)
+      ];
+      document.write(humans + "<br/>");
+      humans.sort(function(n, m) {
+        let f = n.Age;
+        let s = m.Age;
+        if (f < s) {
+          return -1;
+        } else if (f > s) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+
+      document.write(humans);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = () => {
+            let flagFirst = false, flagSecond = false, flagThird = false;
+            let first = document.getElementById("first"),
+                second = document.getElementById("second"),
+                third = document.getElementById("third");
+            first.onclick = () => {
+                let wind = window.open("./Advanced%203/4.1 (page 1).html", "Урок 1",
+                    "width=400,height=400");
+                first.innerHTML = "Урок 1 (открыт)";
+                flagFirst = !flagFirst;
+                if (!flagFirst) {
+                    first.innerHTML = "Урок 1";
+                    wind.close();
+                }
+            }
+            second.onclick = () => {
+                let wind = window.open("./Advanced%203/4.2 (page 2).html", "Урок 2",
+                    "width=400,height=400");
+                second.innerHTML = "Урок 2 (открыт)";
+                flagSecond = !flagSecond;
+                if (!flagSecond) {
+                    second.innerHTML = "Урок 2";
+                    wind.close();
+                }
+            }
+            third.onclick = () => {
+                let wind = window.open("./Advanced%203/4.3 (page 3).html", "Урок 3",
+                    "width=400,height=400");
+                third.innerHTML = "Урок 3 (открыт)";
+                flagThird = !flagThird;
+                if (!flagThird) {
+                    third.innerHTML = "Урок 3";
+                    wind.close();
+                }
+            }
+        }
+    </script>
+    </head>
+
+    <body>
+        <ul>
+            <li><a href="#">Главная страница</a></li>
+            <li><a id="first" href="#">Урок 1</a></li>
+            <li><a id="second" href="#">Урок 2</a></li>
+            <li><a id="third" href="#">Урок 3</a></li>
+        </ul>
+    </body>
+
+</html>

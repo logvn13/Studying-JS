@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const add = (a, b) => {
+        return a + b;
+      };
+      const sub = (a, b) => {
+        return a - b;
+      };
+      const mul = (a, b) => {
+        return a * b;
+      };
+      const div = (a, b) => {
+        if (b == 0) {
+          alert("Error : Делить на ноль нельзя");
+        } else {
+          return a / b;
+        }
+      };
+
+      const operand1 = parseInt(prompt("Введите первое число "));
+      let znak = prompt("Выберите знак (+) (-) (*) (/) ");
+      const operand2 = parseInt(prompt("Введите второе число "));
+      let result = 0;
+
+      switch (znak) {
+        case "+":
+          result = add(operand1, operand2);
+          break;
+        case "-":
+          result = sub(operand1, operand2);
+          break;
+        case "*":
+          result = mul(operand1, operand2);
+          break;
+        case "/":
+          result = div(operand1, operand2);
+          break;
+          if ((operand2 = 0)) {
+            alert("Error : Делить на ноль нельзя");
+          }
+      }
+      console.log(operand1 + " " + znak + " " + operand2 + " = " + result);
+    </script>
+  </body>
+</html>

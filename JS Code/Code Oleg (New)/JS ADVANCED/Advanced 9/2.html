@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let countStart = 20;
+        let countEnd = 300;
+        let timer;
+        window.onload = (e) => {
+            e.target.addEventListener('click', (e) => {
+                if (countStart > countEnd) {
+                    timer = setInterval(function () {
+                        countStart = 20;
+                        e.target.style.height = countEnd + 'px';
+                        countEnd--;
+                        if (e.target.style.height === '50px') {
+                            clearInterval(timer);
+                            countEnd = 300;
+                        }
+                    }, 1)
+                }
+                else {
+                    timer = setInterval(function () {
+                        e.target.style.height = countStart + 'px';
+                        countStart++;
+                        if (e.target.style.height === '500px') {
+                            clearInterval(timer);
+                        }
+                    }, 1)
+                }
+            })
+        }
+        function animate(target) {
+
+        }
+    </script>
+    <style>
+        img {
+            height: 30px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="3.jpg" alt="HOMAM III"/>
+    <img src="5.jpg" alt="HOMAM V"/>
+    <img src="7.jpg" alt="HOMAM VII"/>
+</div>
+</body>
+</html>

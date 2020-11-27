@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = () => {
+            let div = document.getElementsByTagName("div")[0];
+            document.getElementById("btn").onclick = () => {
+                let input = parseFloat(document.getElementById("input").value);
+                let numberSite = getRandom(1, 100);
+                if (input > numberSite) {
+                    div.innerHTML = "Введеное число больше чем загадонное";
+                    div.style.backgroundColor = "red";
+                }
+                else if (input < numberSite) {
+                    div.innerHTML = "Введеное число меньше чем загадонное";
+                    div.style.backgroundColor = "yellow";
+                }
+                else {
+                    div.innerHTML = "Вы угадали!!! ";
+                    div.style.backgroundColor = "green";
+                }
+            }
+        }
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+    <style>
+        div {
+            width: 200px;
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <input id="input" type="text" />
+        <input id="btn" type="Button" value="Click" />
+        <div></div>
+    </body>
+
+</html>

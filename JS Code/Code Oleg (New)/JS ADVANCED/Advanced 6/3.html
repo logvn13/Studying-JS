@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                window.onload =  () => {
+            let btn = document.getElementById('btn');
+            btn.addEventListener('mousemove',runFromMouse)
+            function runFromMouse(e){
+                let x = e.clientX, y = e.clientY;
+                btn.style.position = 'absolute';
+                btn.style.left = x + 20 + 'px';
+                btn.style.top = y + 20 + 'px';
+                btn.style.top = y + 20 + 'px';
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btn" type="button" value="Получить скидку"/>
+</body>
+</html>

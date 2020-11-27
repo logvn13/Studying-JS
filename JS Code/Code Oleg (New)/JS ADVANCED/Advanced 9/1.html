@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = (e) => {
+            e.target.addEventListener('click',(e) => {
+                let img = document.img;
+                if(e.target.value === 'HOMAM III'){
+                    img.src = '3.jpg';
+                }
+                if(e.target.value === 'HOMAM V'){
+                    img.src = '5.jpg';
+                }
+                if(e.target.value === 'HOMAM VII'){
+                    img.src = '7.jpg';
+                }
+            })
+        }
+    </script>
+    <style>
+        body{
+            display: table-caption;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="HOMAM III"/><input type="button" value="HOMAM V"/><input type="button" value="HOMAM VII"/>
+<img src="" name="img"/>
+</body>
+</html>

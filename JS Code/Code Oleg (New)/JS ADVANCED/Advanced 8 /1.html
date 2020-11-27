@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let font = 0;
+        let color;
+        window.onload = () => {
+            document.body.style.fontSize = findCookieValue('fontSize') + 'px';
+            document.body.style.backgroundColor = findCookieValue('color');
+            let fontSize = document.getElementById('fontSize');
+            let pattern = /\d/;
+            fontSize.addEventListener('keypress', (e) => {
+                let str = String.fromCharCode(e.charCode);
+                if (!pattern.test(str)) {
+                    e.preventDefault();
+                }
+            })
+            fontSize.addEventListener('blur', () => {
+                font = parseFloat(fontSize.value);
+            })
+            let colors = document.getElementById('colors');
+            colors.onchange = () => {
+                for (let i = 0; i < colors.length; i++)
+                    if (colors[i].selected) {
+                        color = colors[i].value;
+                    }
+            }
+        }
+        
+        window.onbeforeunload = (e) => {
+            if (font != 0 || color != null) {
+                document.cookie = "fontSize=" + font + ";";
+                document.cookie = "color=" + color + ";";
+            }
+            else {
+                e.preventDefault();
+            }
+        }
+        function findCookieValue(cookieName) {
+            let allcookies = document.cookie;
+            let pos = allcookies.indexOf(cookieName + "=");
+
+            if (pos != -1) {
+                let start = pos + cookieName.length + 1;
+                let end = allcookies.indexOf(";", start);
+
+                if (end == -1) {
+                    end = allcookies.length;
+                }
+
+                let value = allcookies.substring(start, end);
+                return value;
+            }
+        }
+        window.onload = () => {
+            let button = document.getElementById('save');
+            button.addEventListener('click', () => {
+                flag = true;
+            })
+        }
+        button.onclick = () => {
+            let div = document.getElementsByTagName ("div") [0];
+            div.font = fontSize;
+        }
+    </script>
+    </head>
+    <body>
+        <label for="colors"></label>
+        <select id="colors">
+            <option value="lightred">lightred</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue" selected>Blue</option>
+            <option value="orange">Orange</option>
+            <option value="black">Black</option>
+        </select>
+        <input id="fontSize" type="text" />
+        <input type="button" value="Сохранить" id="save" />
+        <div>text-text-text-text-text-text-text-text-text-text-text-text-text-text-text-text-text-text</div>
+    </body>
+</html>   

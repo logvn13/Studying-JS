@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Адвокат Народу</title>
+
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Подключаем шрифты -->
+    <link rel="stylesheet" href="fonts/font.css">
+
+    <!-- Подключаем jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Подключаем файл скриптов -->
+    <script src="js/script.js"></script>
+
+    <!-- Покдлючаем слайдер Slick -->
+    <script type="" src="js/slick.min.js"></script>
+
+    <!-- Binotel -->
+    <script type="text/javascript">
+        (function (d, w, s) {
+            let widgetHash = 'bgrvs84hl36x7pha2cpt',
+                gcw = d.createElement(s);
+            gcw.type = 'text/javascript';
+            gcw.async = true;
+            gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js';
+            let sn = d.getElementsByTagName(s)[0];
+            sn.parentNode.insertBefore(gcw, sn);
+        })(document, window, 'script');
+    </script>
+
+    <!-- Jivosite -->
+    <!-- BEGIN JIVOSITE CODE {literal} -->
+    <script type='text/javascript'>
+        if (screen.width > 480) {
+            (function () {
+                let widget_id = 'OvnuvbDOKW';
+                let s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = '//code.jivosite.com/script/widget/' + widget_id;
+                let ss = document.getElementsByTagName('script')[0];
+                ss.parentNode.insertBefore(s, ss);
+            })();
+        }
+    </script>
+    <!-- {/literal} END JIVOSITE CODE -->
+
+    <!-- Якоря для подвала -->
+    <script>
+        $(document).ready(function () {
+            $("#footersergey").on("click", "a", function (event) {
+                event.preventDefault();
+                let id = $(this).attr("href"),
+                    top2 = $(id).offset().top2;
+                $("body,html").animate({
+                    scrollTop: top2,
+                },
+                    500
+                );
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <header class="header" id="top">
+
+        <div class="header_button">
+            <div class="header_button-wrapper">
+                <p class="header_button-text">Соц-мережі:
+                </p>
+                <div class="header_button-container">
+                    <a href="" class="header_button-social-link"></a>
+                    <a href="" class="header_button-social-link"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <nav class="nav" id="menu">
+            <div class="nav-flex-container">
+                <a href="#company" class="nav-link">Про&nbsp;компанію</a>
+                <div class="nav-stick"></div>
+                <a href="#news" class="nav-link">Новини&nbsp;&nbsp;</a>
+            </div>
+            <a href="#company" class="nav-link logo"></a>
+            <div class="nav-flex-container">
+                <a href="#poslugi" class="nav-link">Послуги</a>
+                <div class="nav-stick"></div>
+                <a href="#contacts" class="nav-link">Контакти</a>
+            </div>
+            <a class="scroll up" href="#top"></a>
+            <a class="scroll down" href="#footer-sergey"></a>
+        </nav>
+
+        <a href="tel:+380630000000" class="header_call-us">
+            <p class="header_call-us-text"> +38&nbsp;(063)&nbsp;185&nbsp;33&nbsp;25<br> 9:00-18:00
+            </p>
+            <div class="header_call-us-img" alt="tel."></div>
+        </a>
+
+        <form class="header_mobile" id="mobile_menu">
+            <input type="checkbox" class="header_mobile-input" id="mobile_button">
+            <label for="mobile_button" class="header_mobile-button"></label>
+            <div class="header_mobile-menu">
+                <a href="#company" class="nav-link header_mobile-menu-button">Про&nbsp;компанію</a>
+                <a href="#news" class="nav-link header_mobile-menu-button">Новини&nbsp;&nbsp;</a>
+                <a href="#poslugi" class="nav-link header_mobile-menu-button">Послуги</a>
+                <a href="#footer-sergey" class="nav-link header_mobile-menu-button">Контакти</a>
+            </div>
+        </form>
+        <script>
+             document.querySelectorAll('.header_mobile-menu-button').forEach((item) => {
+                 item.addEventListener('click', (e) => {
+                     document.querySelector('.header_mobile-menu').style.top = '-725px';
+                     document.querySelector('.header_mobile-button').style.backgroundImage = 'url("../img/mobile-menu.png")';
+                 })
+             })
+             document.querySelectorAll('.header_mobile-button').forEach((item) => {
+                 item.addEventListener('click', (e) => {
+                    document.querySelector('.header_mobile_menu').style.top = '-725px'
+                     document.querySelector('.header_mobile-menu').style.top = '0px';
+                 })
+             })
+        </script>
+    </header>
+
+    <div class="mobile-header-margin"></div>
+    <!-- Интро Баннер -->
+    <main class="intro">
+        <div class="intro-container">
+            <div class="intro-container_advokat"></div>
+            <div class="intro-container_slogan">Доб'ємося</br> справедливості разом!</div>
+        </div>
+    </main>
+
+    <section class="onas" id="company">
+        <h2 class="ab-title">Про компанію</h2>
+        <div class="container">
+            <!-- <img class="onas_content-gif" src="./img/gif/platon-stand.gif" alt=""> -->
+            <p class="onas_content-desc">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad voluptas nemo provident ut, et atque eaque
+                at porro labore. Magni libero tempore aliquid quas earum rerum culpa tempora suscipit nemo? Dolorum quas
+                voluptatibus provident sunt amet dolore ducimus
+                libero magnam quam excepturi itaque vel, error repellendus accusantium consectetur voluptatum sequi ea
+                totam velit illo consequuntur voluptatem.
+            </p>
+        </div>
+    </section>
+    <section class="poslugi" id="poslugi">
+        <div class="container">
+            <h2 class="ab-title">Послуги</h2>
+            <div class="poslugi-title">
+                <div class="tab raw1">Департамент обслуговування Фізичних осіб</div>
+                <div class="poslugi-wrapper">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'London')">Консультації Фізичних осіб в галузі
+                            кримінального, цивільного, адміністративного, міграційного та інших галузей права.</button>
+                        <button class="tablinks" onclick="openCity(event, 'Paris')" id="defaultOpen"><img
+                                src="img/civil-law.png" width="65" height="65" alt="">
+                            <div>Цивільне та сімейне право</div>
+                        </button>
+                        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Міграційне право</button>
+                        <button class="tablinks" onclick="openCity(event, 'London2')" id="defaultOpen">Адміністративне і
+                            земельне право</button>
+                        <button class="tablinks" onclick="openCity(event, 'Paris2')">Допомога адвоката при ДТП</button>
+                        <button class="tablinks" onclick="openCity(event, 'Tokyo2')">Кримінальне право</button>
+                    </div>
+
+                    <div id="London" class="tabcontent">
+                        <h3>Консультації Фізичних осіб в галузі кримінального, цивільного, адміністративного,
+                            міграційного та інших галузей права.</h3>
+                        <p></p>
+                    </div>
+
+                    <div id="Paris" class="tabcontent">
+                        <img src="img/advokat.png" alt="">
+                        <ul>
+                            <li>Стягнення боргу (розписка, договір позики ....)</li>
+                            <li>Визнання угод недійсними</li>
+                            <li>Оформлення Шлюбного договору</li>
+                            <li>Розділ майна та інші послуги</li>
+                        </ul>
+                    </div>
+
+                    <div id="Tokyo" class="tabcontent">
+                        <h3>Міграційне право</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+
+                    <div id="London2" class="tabcontent">
+                        <h3>Адміністративне і земельне право</h3>
+                        <p>London is the capital city of England.</p>
+                    </div>
+
+                    <div id="Paris2" class="tabcontent">
+                        <h3>Допомога адвоката при ДТП</h3>
+                        <p>Paris is the capital of France.</p>
+                    </div>
+
+                    <div id="Tokyo2" class="tabcontent">
+                        <h3>Кримінальне право</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+                </div>
+
+                <script>
+                    function openCity(evt, cityName) {
+                        let i, tabcontent, tablinks;
+                        tabcontent = document.getElementsByClassName("tabcontent");
+                        for (i = 0; i < tabcontent.length; i++) {
+                            tabcontent[i].style.display = "none";
+                        }
+                        tablinks = document.getElementsByClassName("tablinks");
+                        for (i = 0; i < tablinks.length; i++) {
+                            tablinks[i].className = tablinks[i].className.replace(" active", "");
+                        }
+                        document.getElementById(cityName).style.display = "flex";
+                        evt.currentTarget.className += " active";
+                    }
+
+                    // Get the element with id="defaultOpen" and click on it
+                    document.getElementById("defaultOpen").click();
+                </script>
+
+            </div>
+
+            <script>
+                let acc = document.getElementsByClassName("accordion");
+                let i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        let panel = this.nextElementSibling;
+                        if (panel.style.maxHeight) {
+                            panel.style.maxHeight = null;
+                        } else {
+                            panel.style.maxHeight = panel.scrollHeight + "px";
+                        }
+                    });
+                }
+            </script>
+        </div>
+    </section>
+    <section id="news">
+        <h2 class="slider-title">Новини</h2>
+        <div class="slider">
+            <div class="slider_item">
+                <div class="slider_item-img"></div>
+                <div class="slider_item-container">
+                    <h3 class="slider_item-title">Название Статьи</h3>
+                    <p class="slider_item-desc">Краткое описание Статьи,</p>
+                    <p class="slider_item-desc">пару слов для прессы</p>
+                </div>
+            </div>
+            <div class="slider_item">
+                <div class="slider_item-img"></div>
+                <div class="slider_item-container">
+                    <h3 class="slider_item-title">Название Статьи</h3>
+                    <p class="slider_item-desc">Краткое описание Статьи,</p>
+                    <p class="slider_item-desc">пару слов для прессы</p>
+                </div>
+            </div>
+            <div class="slider_item">
+                <div class="slider_item-img"></div>
+                <div class="slider_item-container">
+                    <h3 class="slider_item-title">Название Статьи</h3>
+                    <p class="slider_item-desc">Краткое описание Статьи,</p>
+                    <p class="slider_item-desc">пару слов для прессы</p>
+                </div>
+            </div>
+            <div class="slider_item">
+                <div class="slider_item-img"></div>
+                <div class="slider_item-container">
+                    <h3 class="slider_item-title">Название Статьи</h3>
+                    <p class="slider_item-desc">Краткое описание Статьи,</p>
+                    <p class="slider_item-desc">пару слов для прессы</p>
+                </div>
+            </div>
+            <div class="slider_item">
+                <div class="slider_item-img"></div>
+                <div class="slider_item-container">
+                    <h3 class="slider_item-title">Название Статьи</h3>
+                    <p class="slider_item-desc">Краткое описание Статьи,</p>
+                    <p class="slider_item-desc">пару слов для прессы</p>
+                </div>
+            </div>
+            <div class="slider_item">
+                <div class="slider_item-img"></div>
+                <div class="slider_item-container">
+                    <h3 class="slider_item-title">Название Статьи</h3>
+                    <p class="slider_item-desc">Краткое описание Статьи,</p>
+                    <p class="slider_item-desc">пару слов для прессы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="footersergey">
+        <div class="container">
+            <div class="footer-container about-us">
+                <h3 class="footer-container-title">Контакти</h3>
+                <p class="footer-container-desc"><img src="./img/adress.png" width="20" height="20"
+                        alt=""><span>вул.Грецька 31, Кокон, 4 поверх</span></p>
+                <p class="footer-container-desc"><img src="./img/f-phone.png" width="20" height="20" alt=""><a
+                        href="tel:0800334259"><span>0-800-33-42-59</span></a></p>
+                <p class="footer-container-desc"><img src="./img/mail.png" width="20" height="20" alt=""><a
+                        href="mailto:office@advokat-narodu.com"><span>office@advokat-narodu.com</span></a></p>
+                <p class="footer-container-desc"><img src="./img/time.png" width="20" height="20" alt=""><span>Пн-Пт:
+                        10:00-18:00 Сб.Вс.: Вихідні</span></p>
+            </div>
+            <div class="footer-container quick-links">
+                <div class="column">
+                    <h3 class="footer-container-title">Меню</h3>
+                    <a onclick="location.href='https://advokat-narodu.com/index.html'"
+                        class="footer-quick-links footer-container-desc">
+                        Головна
+                    </a>
+                    <a href="#poslugi" class="footer-quick-links footer-container-desc">
+                        Послуги
+                    </a>
+                    <a href="#company" class="footer-quick-links footer-container-desc">
+                        Про компанію
+                    </a>
+                    <a href="#news" class="footer-quick-links footer-container-desc">
+                        Новини
+                    </a>
+                </div>
+            </div>
+            <div class="footer-container find-us">
+                <h3 class="footer-container-title">Знайдіть нас у</h3>
+                <div class="display-flex">
+                    <a href="https://www.facebook.com/%D0%A3%D0%BA%D1%80%D0%97%D0%B5%D0%BC-%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B5-%D0%B7%D0%B5%D0%BC%D0%B5%D0%BB%D1%8C%D0%BD%D0%B5-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%BE-106937327888545/"
+                        class="f-img-container"></a>
+                    <a href="https://instagram.com/ukrzem_org?igshid=bry2tnjfxgoc" class="f-img-container"></a>
+                </div>
+                <div onclick="location.href='https://advokat-narodu.com/index.html#poslugi'" class="footer-logo"></div>
+            </div>
+        </div>
+    </footer>
+</body>

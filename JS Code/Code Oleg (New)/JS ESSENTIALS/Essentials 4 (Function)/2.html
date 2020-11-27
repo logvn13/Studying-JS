@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = prompt("Введите число для проверки ");
+      const check = x1 => {
+        if (n > 0) {
+          document.write("Число является положительным <br/>");
+        }
+        if (n < 0) {
+          document.write("Число является отрицательным <br/>");
+        }
+      };
+      document.write(
+        `Число ${n} ${n % 2 ? "не" : ""} делится на 2 без остатка <br/>`
+      );
+      document.write(
+        `Число ${n} ${n % 5 ? "не" : ""} делится на 5 без остатка <br/>`
+      );
+      document.write(
+        `Число ${n} ${n % 3 ? "не" : ""} делится на 3 без остатка <br/>`
+      );
+      document.write(
+        `Число ${n} ${n % 6 ? "не" : ""} делится на 6 без остатка <br/>`
+      );
+      document.write(
+        `Число ${n} ${n % 9 ? "не" : ""} делится на 9 без остатка <br/>`
+      );
+      check(n);
+    </script>
+  </body>
+</html>

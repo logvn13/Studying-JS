@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ms = 0;
+        let sec = 0;
+        let min = 0;
+        window.onload = () => {
+            function count() {
+                if (ms == 0 && sec == 0 && min == 0) {
+                    get ("timer").innerHTML = "00:00:00";
+                }
+                else if (ms < 10 && sec < 10) {
+                }
+            }
+            function count() {
+                if (ms == 0 && sec == 0 && min == 0) {
+                    get("timer").innerHTML = "00:00:00";
+                }
+                else if (ms < 10 && sec < 10) {
+                    get("timer").innerHTML = "0" + min.toString() + ":0" + sec.toString() + ":0" + ms.toString();
+                }
+                else if (sec > 10 && ms < 10) {
+                    get("timer").innerHTML = "0" + min.toString() + ":" + sec.toString() + ":0" + ms.toString();
+                }
+                else if (sec < 10) {
+                    get("timer").innerHTML = "0" + min.toString() + ":0" + sec.toString() + ":" + ms.toString();
+                }
+                else if (min < 10) {
+                    get("timer").innerHTML = "0" + min.toString() + ":" + sec.toString() + ":" + ms.toString();
+                }
+                ms++;
+                if (ms > 99) {
+                    ms = 0;
+                    sec++;
+                    if (sec > 59) {
+                        sec = 0;
+                        min++;
+                    }
+                }
+            }
+            get("startButton").onclick = () => {
+                intervalHandler = setInterval(count, 0);
+            }
+
+            get("stopButton").onclick = () => {
+                clearInterval(intervalHandler);
+            }
+            get("resetButton").onclick = () => {
+                ms = 0;
+                sec = 0;
+                min = 0;
+                get("timer").innerHTML = "00:00:00";
+            }
+        }
+        const get = (id) => {
+            return document.getElementById(id);
+        }
+    </script>
+    </head>
+
+    <body>
+        <p id="timer">00:00:00</p>
+        <input id="startButton" type="button" value="Start" />
+        <input id="stopButton" type="button" value="Stop" />
+        <input id="resetButton" type="button" value="Reset" />
+    </body>
+
+</html>

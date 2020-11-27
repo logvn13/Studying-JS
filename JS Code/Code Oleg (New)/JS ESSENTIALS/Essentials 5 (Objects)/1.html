@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let documents = {
+        header: "Name",
+        body: "Text",
+        footer: "Served",
+
+        doc1: { header: "Name", body: "Text", footr: "Served" },
+
+        edit: function() {
+          let a = prompt("Введите заголовок", "");
+          let b = prompt("Введите текст", "");
+          let c = prompt("Введите подпись", "");
+          documents.doc1.name = a;
+          documents.doc1.body = b;
+          documents.doc1.footer = c;
+        },
+
+        open: function() {
+          document.writeln(documents.doc1.name);
+          document.writeln(documents.doc1.body);
+          document.writeln(documents.doc1.footer);
+        }
+      };
+
+      documents.edit();
+      documents.open();
+    </script>
+  </body>
+</html>

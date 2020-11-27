@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function MyObject(name) {
+        this.name = name;
+      }
+      MyObject.staticProperty = "Property ";
+      MyObject.prototype.someMethod = function() {
+        document.write("object " + this.name + "<br/>");
+      };
+      MyObject.staticMethod = function() {
+        document.write(
+          "Static Method and Static Property: " +
+            MyObject.staticProperty +
+            "<br/>"
+        );
+      };
+      let example = new MyObject("Example");
+      example.someMethod();
+      MyObject.staticMethod();
+    </script>
+  </body>
+</html>

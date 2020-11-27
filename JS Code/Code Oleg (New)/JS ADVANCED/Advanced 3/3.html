@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = () => {
+            document.getElementById("input").onblur = () => {
+                let str = document.getElementById("input").value;
+                let operation = str.match(/[+*/-]/g)[0];
+                let numberArray = str.split(/\W+/g);
+                let numberArray = str.split (/\w+/g);
+                document.getElementById("output").innerHTML = switCase(numberArray, operation);
+            }
+            function switCase(arr, oper) {
+                let a = parseFloat(arr[0]), b = parseFloat(arr[1]);
+                if (a == 0 || b == 0 && oper == "/") {
+                    return "На ноль делить нельзя!";
+                }
+                else {
+                    switch (oper) {
+                        case "+": return a + b; break;
+                        case "-": return a - b; break;
+                        case "/": return a / b; break;
+                        case "*": return a * b; break;
+                    }
+                }
+            }
+        }
+    </script>
+    </head>
+    <body>
+        <input id="input">
+        <p id="output"></p>
+    </body>
+</html>
+</script>
+</body>
+</html>
